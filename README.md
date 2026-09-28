@@ -1,11 +1,19 @@
 # AM MUT Extractor
 
 Tiny **Android phone** app that logs into Apple Music in a WebView and reads back your
-**media-user-token (MUT)** so you can paste it into [Apple Music TV](../) at its `:8080` token page.
+**media-user-token (MUT)**.
 
-Why: typing an Apple ID + password into a WebView on a Fire TV is broken (the on-screen keyboard
-mangles password fields). On a phone the keyboard works fine, so grab the token here and paste it
-onto the TV.
+## What it's for — Apple Music TV
+
+This is a companion tool for **Apple Music TV**, a native Android TV / Fire TV Apple Music client.
+That app needs your Apple Music **media-user-token** to stream full tracks, load lyrics, and read your
+library. It normally takes the token via its on-device `:8080` page (open `http://<FireTV-IP>:8080`
+on a phone and paste the token in).
+
+The catch: getting the token means signing into Apple with your Apple ID + password, and typing that
+**on a Fire TV is broken** — the on-screen keyboard mangles WebView password fields (first char
+doubled, backspace broken, passwords barely register). This app sidesteps that: run it **on your
+phone**, where the keyboard works, grab the token, and paste it onto the TV.
 
 ## Use
 1. Install the APK on your phone.
